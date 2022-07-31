@@ -28,7 +28,7 @@ if (localStorage.getItem("theme") === "dark") {
 
 function projectImg(mode) {
 
-    heroImage.style.backgroundImage = `url(../Images/${mode}.jpg)`;
+    heroImage.style.backgroundImage = `url(./Images/${mode}.jpg)`;
 
 }
 
