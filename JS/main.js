@@ -60,13 +60,13 @@ menuToggle.onclick = () => {
 
 const loader = document.querySelector('.loader');
 
-// window.onload = () => {
-// 	setInterval(fadeOut, 6000);
-// 	setTimeout(typer,6000);
-// 	scrollTo(0,0);
-//     scrollProgress();
+window.onload = () => {
+	setInterval(fadeOut, 6000);
+	setTimeout(typer,6000);
+	scrollTo(0,0);
+    scrollProgress();
 
-// }
+}
 
 
 function fadeOut() {
