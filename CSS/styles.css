@@ -735,10 +735,6 @@ body.active #skills .skills-right{
 #speciality {
     position: relative;
     z-index: 10;
-    /* background-image: var(--background-image);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -766,6 +762,7 @@ body.active #skills .skills-right{
     gap: 30px;
     background-color: var(--tertiary-color);
     padding-left: 100px;
+    padding-right: 10px;
 }
 
 body.active #speciality .left{
@@ -778,6 +775,7 @@ body.active #speciality .left{
     border-left: 3px solid var(--secondary-color);
     padding: 25px;
     display: flex;
+    margin-top: 100px;
 
 }
 #speciality .speciality-title p{
@@ -1218,8 +1216,52 @@ footer .copyright h5{
         gap: 20px;
     }
 
+    
+    #speciality {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #speciality .right{
+        
+        width: 100%;
+        min-height: 0;
+        height: 500px;
+    }
+    #speciality .left{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        background-color: var(--tertiary-color);
+        padding: 100px 0 100px 80px;
+   
+    }
+    #speciality .left .info-cards {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 400px;
+        gap: 30px;
+        width: 100%;
+    }
+
+    
+    #speciality .left .speciality-title{
+        border-left: 3px solid var(--secondary-color);
+        padding: 25px;
+        display: flex;
+        margin-top: 100px;
+        width: 100%;
+    
+    }
+
     #projects {
-        padding: 50px 0;
+        padding: 50px 0 100px 0;
     }
 
     #projects .project-content {
@@ -1258,7 +1300,7 @@ footer .copyright h5{
         width: 100%;
         height: auto;
        
-        padding: 50px;
+        padding: 50px 50px 100px 50px;
         
     }
     body.active #skills .skills-right{
@@ -1312,6 +1354,14 @@ footer .copyright h5{
         color: var(--color-contrast);
     }
 
+    #load-more.btn {
+        margin-top: 50px;
+    }
+
+
+    #contact {
+        padding: 170px 40px 100px 40px;
+    }
 }
 
 
