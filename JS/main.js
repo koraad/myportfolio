@@ -196,6 +196,7 @@ const username = document.getElementById('name');
 const sub = document.getElementById('sub');
 const email = document.getElementById('email');
 const check = document.getElementById('check');
+const reset = document.getElementById('reset');
 const message = document.getElementById('message');
 const submitMessage = document.getElementById('submit-message');
 const submitMessageClose = document.getElementById('submit-close');
@@ -219,6 +220,27 @@ check.addEventListener('click', (e) => {
 
 submitMessageClose.onclick = ()=> {
     submitMessage.style.display = 'none'
+}
+reset.onclick = ()=> {
+
+    let inputs = document.querySelectorAll('.input-wrapper input')
+    message.value = ''
+
+    inputs.forEach(input => {
+        input.value = ''
+     
+    })
+
+    let formControls = document.querySelectorAll('.form-control')
+    formControls.forEach(control => {
+        control.classList.remove('success');
+    })
+
+
+    nameSuccess = 0 
+    subSuccess = 0 
+    emailSuccess = 0
+    messageSuccess = 0
 }
 
 document.onload = ()=> {
