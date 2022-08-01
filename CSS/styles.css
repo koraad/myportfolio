@@ -26,6 +26,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -98,6 +99,11 @@ p {
     color: var(--color-contrast);
     max-width: 800px;
     line-height: 30px;
+}
+
+a {
+    font-weight: 200;
+    letter-spacing: 1px;
 }
 
 /* section name tag */
@@ -249,18 +255,18 @@ header .profile {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 header .fa-solid {
     cursor: pointer;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     letter-spacing: 1px;
-    line-height: 42px;
+    line-height: 40px;
     font-size: 15px;
     text-align: center;
-    color: black;
+    color: var(--bg-color);
     transition: var(--transition-basic);
     background-color: white;
     border-radius: 50%;
@@ -278,20 +284,20 @@ header i:hover {
     top: 60%;
     transform: translateY(-60%);
     background-color: transparent;
-    height: 300px;
+    height: 250px;
     z-index: 10000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60px;
+    width: 50px;
     overflow-x: visible;
     gap: 1px;
     transition: 1s ease-in-out;
 }
 .sticky-social a .background{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     padding: 20px;
     cursor: pointer;
     color: black;
@@ -305,12 +311,12 @@ header i:hover {
 }
 
 .sticky-social .background:hover{
-    width: 100px;
+    width: 80px;
     transition: var(--transition-basic);
 
 }
 .sticky-social .background:hover i{
-    transform: translateX(15px);
+    transform: translateX(12px);
     transition: var(--transition-basic);
     color: white;
     
@@ -318,7 +324,7 @@ header i:hover {
 
 
 .sticky-social i {
-   font-size: 30px;
+   font-size: 20px;
    transition: var(--transition-basic);
    color: black;
 }
@@ -657,6 +663,11 @@ body.active .btn {
     align-items: center;
     margin: 0;
 }
+#skills .btn{
+    background-color: var(--bg-color);
+    color: white;
+    border: none;
+}
 
 
 #skills .skills-left{
@@ -933,10 +944,46 @@ body.active #projects {
 
 #contact {
 
-    padding: 150px 250px;
+    padding: 200px 250px;
     background-color: var(--tertiary-color);
     margin-bottom: 380px;
 }
+
+#contact .submit-message{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#contact .submit-message .container{
+    padding: 40px;
+    width: 500px;
+    height: auto;
+    background-color: var(--color-normal);
+    position: relative;
+}
+#contact .submit-message .container h2{
+    text-transform: uppercase;
+}
+#contact .submit-message .container i{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#submit {
+    background-color: var(--bg-color);
+    color: white;
+    border: none;
+}
+
 body.active #contact {
 
 
@@ -1158,7 +1205,75 @@ footer .copyright h5{
     
     #contact {
 
-        padding: 40px;
+        padding: 200px 40px;
+    }
+
+    #skills {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #skills .skills-left{
+        width: 100%;
+        height: 80vh;
+        
+    }
+    #skills .skills-right{
+        width: 100%;
+        height: auto;
+       
+        padding: 50px 50px 100px 50px;
+        
+    }
+    body.active #skills .skills-right{
+        background-color: black;
+    }
+    
+    #skills .skills-right .container{
+        width: 100%;
+        padding-left: 60px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100%;
+    }
+    #skills .skills-right .container h3{
+        text-transform: capitalize;
+        text-align: left;
+        font-weight: 200;
+    }
+    #skills .skills-right .container p{
+        margin: 20px 0;
+        font-size: 15px;
+        text-align: left;
+        font-weight: 200;
+    }
+    .skills-icons{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .skills-icons .skills{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .skills-icons .skills .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--bg-color);
+        width: 50px;
+        height: 50px;
+    }
+    .skills-icons .skills .icon i{
+        font-size: 25px;
+        color: var(--color-contrast);
     }
 
 }
@@ -1286,73 +1401,7 @@ footer .copyright h5{
     }
 
     
-    #skills {
-        flex-direction: column;
-        height: auto;
-    }
-
-    #skills .skills-left{
-        width: 100%;
-        height: 80vh;
-        
-    }
-    #skills .skills-right{
-        width: 100%;
-        height: auto;
-       
-        padding: 50px 50px 100px 50px;
-        
-    }
-    body.active #skills .skills-right{
-        background-color: black;
-    }
     
-    #skills .skills-right .container{
-        width: 100%;
-        padding-left: 60px;
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        height: 100%;
-    }
-    #skills .skills-right .container h3{
-        text-transform: capitalize;
-        text-align: left;
-        font-weight: 200;
-    }
-    #skills .skills-right .container p{
-        margin: 20px 0;
-        font-size: 15px;
-        text-align: left;
-        font-weight: 200;
-    }
-    .skills-icons{
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 40px;
-        flex-wrap: wrap;
-    }
-    .skills-icons .skills{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-    }
-    .skills-icons .skills .icon{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid var(--bg-color);
-        width: 50px;
-        height: 50px;
-    }
-    .skills-icons .skills .icon i{
-        font-size: 25px;
-        color: var(--color-contrast);
-    }
 
     #load-more.btn {
         margin-top: 50px;
