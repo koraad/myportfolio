@@ -183,7 +183,7 @@ loadButton.onclick = ()=> {
     }
     loadCount += 2
 
-	if(loadCount == 8) {
+	if(loadCount == 10) {
 		loadButton.style.display = 'none';
 	}
 	
@@ -191,100 +191,100 @@ loadButton.onclick = ()=> {
 
 // form validation
 
-// var check = document.getElementById('check');
-// var username = document.getElementById('name');
-// var tel = document.getElementById('tel');
-// var email = document.getElementById('email');
-// var address = document.getElementById('address');
-// var message = document.getElementById('message');
 
+const username = document.getElementById('name');
+const sub = document.getElementById('sub');
+const email = document.getElementById('email');
+const check = document.getElementById('check');
+const message = document.getElementById('message');
+const submitMessage = document.getElementById('submit-message');
+const submitMessageClose = document.getElementById('submit-close');
 
-// check.addEventListener('click', (e) => {
-// 	e.preventDefault();
+let nameSuccess,subSuccess,emailSuccess,messageSuccess;
+
+check.addEventListener('click', (e) => {
+	e.preventDefault();
 	
-// 	checkInputs();
+	checkInputs();
 
-// 	if (nameSuccess == 1 && telSuccess == 1 && emailSuccess == 1 && addressSuccess == 1 && messageSuccess == 1) {
-// 		popupWindow();
-// 	} 
-// });
+	if (nameSuccess == 1 && subSuccess == 1 && emailSuccess == 1 && messageSuccess == 1) {
 
+        submitMessage.style.display = 'flex'
 
-// function checkInputs() {
-// 	const usernameValue = username.value.trim();
-// 	const telValue = tel.value.trim();
-// 	const emailValue = email.value.trim();
-// 	const addressValue = address.value.trim();
-// 	const messageValue = message.value.trim();	
+	} else {
+
+        submitMessage.style.display = 'none'
+    }
+});
+
+submitMessageClose.onclick = ()=> {
+    submitMessage.style.display = 'none'
+}
+
+document.onload = ()=> {
+    message.value = ''
+    username.value = ''
+    email.value = ''
+    sub.value = ''
+}
+
+function checkInputs() {
+	const usernameValue = username.value.trim();
+	const subValue = sub.value.trim();
+	const emailValue = email.value.trim();
+
+	const messageValue = message.value.trim();	
 	
 	
-// 	if(usernameValue == '') {
-// 		setErrorFor(username, 'Name cannot be blank');
-// 	} else if (usernameValue.length < 3) {
-// 		setErrorFor(username, 'Name cannot be less than 3 letters');
-// 	} else {
-// 		setSuccessFor(username);
-// 		nameSuccess = 1;
-// 	}
+	if(usernameValue == '') {
+		setErrorFor(username, 'Name cannot be blank');
+	} else if (usernameValue.length < 3) {
+		setErrorFor(username, 'Name cannot be less than 3 letters');
+	} else {
+		setSuccessFor(username);
+		nameSuccess = 1;
+	}
 	
-// 	if(telValue == '') {
-// 		setErrorFor(tel, 'Tel number cannot be blank');
-// 	} else if (telValue.length < 10) {
-// 		setErrorFor(tel, 'Tel number cannot be less than 10 digits');
-// 	}else {
-// 		setSuccessFor(tel);
-// 		telSuccess = 1;
-// 	}
-// 	if(emailValue == '') {
-// 		setErrorFor(email, 'Email cannot be blank');
-// 	} else if (!isEmail(emailValue)) {
-// 		setErrorFor(email, 'Not a valid email');
-// 	} else {
-// 		setSuccessFor(email);
-// 		emailSuccess = 1;
-// 	}
-// 	if(addressValue == '') {
-// 		setErrorFor(address, 'Address cannot be blank');
-// 	} else if (addressValue.length < 20) {
-// 		setErrorFor(address, 'Address cannot be less than 20 characters');
-// 	} else {
-// 		setSuccessFor(address);
-// 		addressSuccess = 1;
-// 	}
-// 	if(messageValue == '') {
-// 		setErrorFor(message, 'Message cannot be blank');
-// 	} else if (addressValue.length < 5) {
-// 		setErrorFor(tel, 'Message cannot be less than 5 characters');
-// 	} else {
-// 		setSuccessFor(message);
-// 		messageSuccess = 1;
+	if(subValue == '') {
+		setErrorFor(sub, 'Subject cannot be empty');
+	} else {
+		setSuccessFor(sub);
+		subSuccess = 1;
+	}
+	if(emailValue == '') {
+		setErrorFor(email, 'Email cannot be blank');
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'Not a valid email');
+	} else {
+		setSuccessFor(email);
+		emailSuccess = 1;
+	}
+	
+	if(messageValue == '') {
+		setErrorFor(message, 'Message cannot be blank');
+	} else if (messageValue.length < 5) {
+		setErrorFor(message, 'Message cannot be less than 5 characters');
+	} else {
+		setSuccessFor(message);
+		messageSuccess = 1;
 		
-// 	}
+	}
 
+
+}
+
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
+}
 	
-// 	document.getElementById('output-name').innerHTML = usernameValue
-// 	document.getElementById('output-tel').innerHTML = telValue
-// 	document.getElementById('output-email').innerHTML = emailValue
-// 	document.getElementById('output-address').innerHTML = addressValue
-// 	document.getElementById('output-message').innerHTML = messageValue
-// 	document.getElementById('output-category').innerHTML = document.querySelector('input[name="Query Type"]:checked').value;
-	
-
-
-// }
-
-// function setErrorFor(input, message) {
-// 	const formControl = input.parentElement;
-// 	const small = formControl.querySelector('small');
-// 	formControl.className = 'form-control error';
-// 	small.innerText = message;
-// }
-
-// function setSuccessFor(input) {
-// 	const formControl = input.parentElement;
-// 	formControl.className = 'form-control success';
-// }
-	
-// function isEmail(email) {
-// 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-// }
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
