@@ -316,7 +316,7 @@ header i:hover {
 
 }
 .sticky-social .background:hover i{
-    transform: translateX(12px);
+    transform: translateX(15px);
     transition: var(--transition-basic);
     color: white;
     
