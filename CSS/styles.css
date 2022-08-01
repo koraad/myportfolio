@@ -944,7 +944,7 @@ body.active #projects {
 
 #contact {
 
-    padding: 200px 250px;
+    padding: 200px 250px 100px;
     background-color: var(--tertiary-color);
     margin-bottom: 380px;
 }
