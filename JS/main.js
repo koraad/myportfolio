@@ -208,6 +208,8 @@ loadButton.onclick = ()=> {
 	
 }
 
+// contact section
+
 // form validation
 
 
@@ -229,11 +231,11 @@ check.addEventListener('click', (e) => {
 
 	if (nameSuccess == 1 && subSuccess == 1 && emailSuccess == 1 && messageSuccess == 1) {
 
-        submitMessage.style.display = 'flex'
+        submitMessage.style.display = 'flex';
 
 	} else {
 
-        submitMessage.style.display = 'none'
+        submitMessage.style.display = 'none';
     }
 });
 
@@ -279,8 +281,10 @@ function checkInputs() {
 	
 	if(usernameValue == '') {
 		setErrorFor(username, 'Name cannot be blank');
+        nameSuccess = 0
 	} else if (usernameValue.length < 3) {
 		setErrorFor(username, 'Name cannot be less than 3 letters');
+        nameSuccess = 0
 	} else {
 		setSuccessFor(username);
 		nameSuccess = 1;
@@ -288,14 +292,17 @@ function checkInputs() {
 	
 	if(subValue == '') {
 		setErrorFor(sub, 'Subject cannot be empty');
+        subSuccess = 0;
 	} else {
 		setSuccessFor(sub);
 		subSuccess = 1;
 	}
 	if(emailValue == '') {
 		setErrorFor(email, 'Email cannot be blank');
+        emailSuccess = 0;
 	} else if (!isEmail(emailValue)) {
 		setErrorFor(email, 'Not a valid email');
+        emailSuccess = 0;
 	} else {
 		setSuccessFor(email);
 		emailSuccess = 1;
@@ -303,8 +310,12 @@ function checkInputs() {
 	
 	if(messageValue == '') {
 		setErrorFor(message, 'Message cannot be blank');
+		messageSuccess = 0;
+
 	} else if (messageValue.length < 5) {
 		setErrorFor(message, 'Message cannot be less than 5 characters');
+		messageSuccess = 0;
+
 	} else {
 		setSuccessFor(message);
 		messageSuccess = 1;
