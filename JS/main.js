@@ -32,12 +32,25 @@ function projectImg(mode) {
 
 }
 
+// social mobile 
+
+const socialMobile = document.getElementById('social-mobile')
+const stickySocial = document.querySelector('.sticky-social')
+
+socialMobile.onclick = ()=> {
+    if (stickySocial.style.left === '-100%') {
+        stickySocial.style.left = '0'
+    } else {
+        stickySocial.style.left = '-100%'
+    }
+    
+}
+
 
 // menu toggle 
 
 
 const menuToggle = document.getElementById('menu-toggle');
-// const mobileToggle = document.getElementById('mobile-toggle');
 
 menuToggle.onclick = () => {
   if (menuToggle.classList.contains('fa-bars')) {
@@ -85,7 +98,7 @@ function typer() {
 
 
 
-// sticky social 
+// navbar hide
 
 const navBar = document.querySelector('header')
 
@@ -96,14 +109,6 @@ document.onscroll = function() {
     menuToggle.classList.replace('fa-xmark', 'fa-bars');
     document.querySelector('header nav').classList.remove('active');
 
-    // sticky social icons hide
-    if (window.innerHeight + window.scrollY > document.body.clientHeight) {
-        document.querySelector('.sticky-social').style.left='-100%';
-        document.querySelector('.sticky-social').style.opacity='0';
-    } else {
-        document.querySelector('.sticky-social').style.left='0';
-        document.querySelector('.sticky-social').style.opacity='1'; 
-    }
     // scroll progress js
     scrollProgress();
 
@@ -111,16 +116,30 @@ document.onscroll = function() {
 
     navBarBg();
 
-    
+    // back to top
+
+    backToTop();
     
 }
 
+function backToTop() {
+    if (window.scrollY > 500) {
+        
+        document.querySelector('.top-btn').style.display = 'flex'
+        
+    } else {
+        document.querySelector('.top-btn').style.display = 'none'
+       
+    }
+}
 function navBarBg() {
     if (window.scrollY > 100) {
         navBar.style.backgroundColor = '#303236';
         
+        
     } else {
         navBar.style.backgroundColor = 'transparent';
+       
     }
 }
 
@@ -161,11 +180,11 @@ window.onscroll = () => {
 } 
 
 function popupClose() {
-    popupSection.style.bottom = '-100%';
+    popupSection.style.left = '-100%';
     popup.style.opacity = '0'
 }
 function popupOpen() {
-    popupSection.style.bottom = '0';
+    popupSection.style.left = '0';
     popup.style.opacity = '1'
 
 }
