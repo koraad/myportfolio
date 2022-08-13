@@ -281,7 +281,7 @@ header i:hover {
 
 .sticky-social {
     position: fixed;
-    left: 0%;
+    left: 0;
     top: 60%;
     transform: translateY(-60%);
     background-color: transparent;
@@ -294,7 +294,7 @@ header i:hover {
     width: 50px;
     overflow-x: visible;
     gap: 1px;
-    transition: 0.6s ease-in;
+    transition: 0.4s ease-in-out;
 }
 .sticky-social a .background{
     width: 50px;
@@ -1401,7 +1401,7 @@ footer .copyright h5{
 
     }
 
-    .sticky-social {
+    .sticky-social.hide {
         left: -100%;
     }
 
