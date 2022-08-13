@@ -37,14 +37,16 @@ function projectImg(mode) {
 const socialMobile = document.getElementById('social-mobile')
 const stickySocial = document.querySelector('.sticky-social')
 
-socialMobile.onclick = ()=> {
-    if (stickySocial.style.left === '-100%') {
-        stickySocial.style.left = '0'
-    } else {
-        stickySocial.style.left = '-100%'
-    }
+socialMobile.onclick = ()=> {  
     
+    if (stickySocial.classList.contains('hide')) {
+        stickySocial.classList.remove('hide')
+    } else {
+        stickySocial.classList.add('hide')
+    }
 }
+
+ 
 
 
 // menu toggle 
