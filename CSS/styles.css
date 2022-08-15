@@ -1008,7 +1008,7 @@ body.active #projects {
 /* video section start */
 
 
-.video-banner {
+/* .video-banner {
     width: 100%;
     height: 400px;
     background-image: url(../Images/video.png);
@@ -1086,7 +1086,7 @@ body.active #projects {
     color: rgba(182, 182, 182, 0.8);
     font-size: 21px;
     cursor: pointer;
-}
+} */
 /* contact section start */
 
 #contact {
@@ -1595,7 +1595,7 @@ footer .copyright h5{
         margin-top: 50px;
     }
 
-    .video-banner .banner-box{
+    /* .video-banner .banner-box{
         flex-direction: column;
         gap: 20px;
     }
@@ -1613,7 +1613,7 @@ footer .copyright h5{
         top: 5%;
         right: 5%;
 
-    }
+    } */
 
 
     #contact {
