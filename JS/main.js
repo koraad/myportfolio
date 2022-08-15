@@ -210,6 +210,19 @@ loadButton.onclick = ()=> {
 	
 }
 
+// video section
+
+const videoClose = document.getElementById('video-close')
+const videoSection = document.querySelector('.video')
+const playVideo = document.querySelector('.play-button')
+
+videoClose.onclick = ()=> {
+    videoSection.style.display = 'none'
+}
+playVideo.onclick = ()=> {
+    videoSection.style.display = 'flex'
+}
+
 // contact section
 
 // form validation
