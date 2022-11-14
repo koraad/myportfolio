@@ -75,8 +75,8 @@ menuToggle.onclick = () => {
 const loader = document.querySelector('.loader');
 
 window.onload = () => {
-	setInterval(fadeOut, 6000);
-	setTimeout(typer,6000);
+	setInterval(fadeOut, 4500);
+	setTimeout(typer,4500);
 	scrollTo(0,0);
     scrollProgress();
 
@@ -212,16 +212,23 @@ loadButton.onclick = ()=> {
 
 // video section
 
-// const videoClose = document.getElementById('video-close')
-// const videoSection = document.querySelector('.video')
-// const playVideo = document.querySelector('.play-button')
+const videoClose = document.getElementById('video-close')
+const videoSection = document.querySelector('.video')
+const playVideo = document.querySelector('.play-button')
+const iFrame = document.querySelector('iframe')
 
-// videoClose.onclick = ()=> {
-//     videoSection.style.display = 'none'
-// }
-// playVideo.onclick = ()=> {
-//     videoSection.style.display = 'flex'
-// }
+playVideo.onclick = ()=> {
+    videoSection.style.display = 'flex'
+    iFrame.playVideo();
+
+}
+
+videoClose.onclick = ()=> {
+    videoSection.style.display = 'none'
+    iFrame.pauseVideo();
+
+}
+
 
 // contact section
 
