@@ -65,7 +65,6 @@ h1 {
     color: var(--color-contrast);
     font-size: 60px;
     font-weight: 400;
-    line-height: 20px;
 }
 
 h2 {
@@ -1472,7 +1471,7 @@ footer .copyright h5{
         
         letter-spacing: 3px;
         font-size: 40px;
-        color: black;
+        color: white;
         font-weight: 200;
         line-height: 45px;
     }
@@ -1598,26 +1597,6 @@ footer .copyright h5{
         margin-top: 50px;
     }
 
-    /* .video-banner .banner-box{
-        flex-direction: column;
-        gap: 20px;
-    }
-    .video-banner .banner-box h2{
-        font-size: 30px;
-    }
-
-    .video iframe {
-        height: 80%;
-        width: 80%;
-    }
-
-    #video-close {
-
-        top: 5%;
-        right: 5%;
-
-    } */
-
 
     #contact {
         padding: 170px 40px 100px 40px;
@@ -1638,7 +1617,6 @@ footer .copyright h5{
     .home-content .typing {
        
         font-size: 30px;
-        line-height: 5px;
         
     }
 
