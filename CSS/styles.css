@@ -989,6 +989,7 @@ body.active #projects {
 }
 #projects .project-content .btn-box{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -1039,7 +1040,7 @@ body.active #projects {
 }
 .video-banner .banner-box h2{
     font-weight: 200;
-    font-size: 35px;
+    font-size: 30px;
     letter-spacing: 2px;
     color: white;
     margin: 0;
@@ -1077,12 +1078,13 @@ body.active #projects {
 
 .video iframe {
     border: solid 5px white;
+    width: 90%;
 }
 
 #video-close {
     position: absolute;
     top: 10%;
-    right: 20%;
+    right: 5%;
     color: rgba(182, 182, 182, 0.8);
     font-size: 21px;
     cursor: pointer;
@@ -1643,18 +1645,18 @@ footer .copyright h5{
     /* section name tag */
 
     section .title-tag {
-        width: 185px;
-        height: 100px;
+        width: 100px;
+        height: 60px;
     }
     section .title-tag::after {
 
-        border-width: 100px 45px 0 0;
+        border-width: 60px 30px 0 0;
 
         
     }
 
     section .title-tag h3{
-        font-size: 13px;
+        font-size: 12px;
         
     }
 
@@ -1691,6 +1693,48 @@ footer .copyright h5{
     }
 
 
+    #skills .skills-right{
+       
+        padding: 50px 30px 100px;
+        
+        
+    }
+    #skills .skills-right .container{
+       
+        padding-left: 0px;
+        
+        
+    }
+    #services{
+       
+        padding: 150px 30px 80px;
+        
+        
+    }
+
+    .service-container .service-card .text-content h1{
+        font-size: 30px;
+        
+    }
+
+    #speciality .left{
+       
+        padding: 80px 30px;
+    }
+
+    #projects .project-content{
+        padding: 0;
+    }
+    #projects .project-content .btn-box{
+        width: 100%;
+        margin-top: 20px;
+    }
+    #projects .project-content .btn-box .btn{
+        width: 200px;
+        margin: 0;
+    }
+
+
     .quality-container {
         padding: 0;
         justify-content: flex-start;
@@ -1707,6 +1751,17 @@ footer .copyright h5{
         width: 250px;
         text-align: left;
      }
+
+    #contact {
+        padding: 170px 10px 100px;
+    }
+
+    .video-banner .banner-box{
+
+        flex-direction: column;
+        gap: 20px;
+
+    }
 
     footer {
         padding: 30px;
