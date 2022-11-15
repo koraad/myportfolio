@@ -1733,6 +1733,7 @@ footer .copyright h5{
 
     footer {
         padding: 30px;
+
     }
 
     footer .content-wrapper .left-column p
@@ -1742,6 +1743,14 @@ footer .copyright h5{
         line-height: 21px;
         margin: 10px 0;
     }
+
+    footer .content-wrapper .right-column
+    {
+        margin: 20px 0;
+
+    }
+  
+
     footer .copyright
     {
         padding: 20px 0 0;
