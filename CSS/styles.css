@@ -791,6 +791,9 @@ body.active #skills .skills-right{
     justify-content: center;
     gap: 30px;
 }
+.skills-icons .skills p{
+   text-transform: uppercase;
+}
 .skills-icons .skills .icon{
     display: flex;
     align-items: center;
