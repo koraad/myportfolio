@@ -182,7 +182,7 @@ loadButton.onclick = () => {
   }
   loadCount += 2;
 
-  if (loadCount == 12) {
+  if (loadCount == 10) {
     loadButton.style.display = "none";
   }
 };
